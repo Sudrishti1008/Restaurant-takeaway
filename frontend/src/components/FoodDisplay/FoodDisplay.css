@@ -1,0 +1,80 @@
+.food-display-wrapper {
+    padding: 40px 5%;
+    background-color: #fffaf5;
+    min-height: 100vh;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #4a1e1e;
+  }
+  
+  /* Header Flex Row */
+  .food-display-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .food-display-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #4a1e1e;
+    margin: 0;
+  }
+  
+  /* Filter Dropdown */
+  .filter-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  .filter-wrapper label {
+    font-weight: bold;
+  }
+  
+  .filter-wrapper select {
+    padding: 6px 12px;
+    border: 1px solid #8d4f34;
+    border-radius: 6px;
+    background-color: #f3e5ab;
+    color: #4a1e1e;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  /* Section Divider */
+  .section-divider {
+    margin: 24px 0;
+    border: none;
+    border-top: 2px dashed #b2643e;
+    width: 100%;
+  }
+  
+  /* Food List Styling */
+  .food-display-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .food-display-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+  
+    .food-display-header h2 {
+      font-size: 2rem;
+    }
+  
+    .filter-wrapper {
+      width: 100%;
+    }
+  }
+  

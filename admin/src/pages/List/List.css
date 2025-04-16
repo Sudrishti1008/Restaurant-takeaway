@@ -1,0 +1,135 @@
+.list {
+    max-width: 850px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .list > p {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .list-table {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 8px;
+  }
+  
+  .list-table-format {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1.5fr;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+  }
+  
+  .list-table-format.title {
+    background-color: #f6f6f6;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  .list-table-format img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  .status-dropdown {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 0.9rem;
+  }
+  
+  .small-btn {
+    margin: 0 4px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: none;
+    background-color: #222;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .small-btn:hover {
+    background-color: #444;
+  }
+  
+  .small-btn.red {
+    background-color: #f44336;
+  }
+  
+  .small-btn.red:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Modal Styling */
+  .edit-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .edit-box {
+    background: #fff;
+    padding: 2rem;
+    width: 420px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .edit-box input,
+  .edit-box textarea,
+  .edit-box select {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+  }
+  
+  .edit-box textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  .edit-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .list-table-format {
+      grid-template-columns: repeat(2, 1fr);
+      font-size: 0.85rem;
+    }
+  
+    .edit-box {
+      width: 90%;
+    }
+  }
+  

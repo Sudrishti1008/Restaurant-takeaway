@@ -1,0 +1,148 @@
+/* .order-item{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+    align-items: start;
+    gap: 30px;
+    border: 1px solid tomato;
+    padding: 20px;
+    margin: 30px 0px;
+    font-size: 14px;
+    color: #505050;
+}
+.order-item-food, .order-item-name{
+    font-weight: 600;
+}
+.order-item-name{
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+.order-item-address{
+    margin-bottom: 10px;
+}
+.order-item select{
+    background-color: #ffe8e4;
+    border: 1px solid tomato;
+    width: max(10vw,120px);
+    padding: 10px;
+    outline: none;
+}
+
+@media (max-width:1000) {
+    .order-item{
+        font-size: 12px;
+        grid-template-columns: 0.5fr 2fr 1fr;
+        padding: 15px 8px;
+    }
+    .order-item select{
+        padding: 5px;
+        font-size: 12px;
+    }
+    .order-item img{
+        width: 40px;
+    }
+} */
+
+.order-list-page {
+    width: 100%;
+    padding: 30px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .order-list-page h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #2e2e2e;
+  }
+  
+  .orders-table {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .orders-header,
+  .orders-row {
+    display: grid;
+    grid-template-columns: 0.7fr 1.5fr 2fr 1.5fr 1.5fr 1fr 1fr;
+    align-items: center;
+    padding: 15px 20px;
+    font-size: 14px;
+  }
+  
+  .orders-header {
+    background-color: #f5f5f5;
+    font-weight: 600;
+    color: #2e2e2e;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .orders-row {
+    border-bottom: 1px solid #eee;
+  }
+  
+  .orders-row img {
+    width: 40px;
+  }
+  
+  .status-select {
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 13px;
+    outline: none;
+    background-color: #fff;
+  }
+  
+  /* Status Colors */
+  .status-select.food-processing {
+    border-color: #ffa36c;
+    background-color: #fff5ee;
+    color: #c75a04;
+  }
+  
+  .status-select.out-for-delivery {
+    border-color: #ffce5c;
+    background-color: #fffae5;
+    color: #a17800;
+  }
+  
+  .status-select.delivered {
+    border-color: #76cc7c;
+    background-color: #eaffea;
+    color: #207f1c;
+  }
+  
+  /* Responsive for Mobile */
+  @media (max-width: 900px) {
+    .orders-header {
+      display: none;
+    }
+  
+    .orders-row {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+  
+    .orders-row > div {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+  
+    .orders-row img {
+      margin-bottom: 10px;
+    }
+  
+    .status-select {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  }
+  

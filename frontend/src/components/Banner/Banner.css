@@ -1,0 +1,43 @@
+.banner-strip {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f6d88f;
+  padding: 8px 0;
+  white-space: nowrap;
+  position: relative;
+  z-index: 100;
+}
+
+.banner-track {
+  display: flex;
+  animation: scroll-left 30s linear infinite;
+}
+
+.banner-text {
+  font-family:  'Poppins', sans-serif; 
+  display: flex;
+  flex-shrink: 0;
+  gap: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #79231d;
+  letter-spacing: 0.5px;
+}
+
+/* Keyframe for scrolling */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Optional responsiveness */
+@media (max-width: 768px) {
+  .banner-text {
+    font-size: 14px;
+    gap: 50px;
+  }
+}

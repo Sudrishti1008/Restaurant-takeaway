@@ -1,0 +1,133 @@
+.place-order {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+  
+  .place-order-left {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .place-order-right {
+    flex: 0.6;
+    min-width: 300px;
+    padding: 30px;
+    height: fit-content;
+  }
+  
+  .section-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2e1f0f;
+    margin-bottom: 12px;
+    display: block;
+  }
+  
+  .multi-fields {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .multi-fields input,
+  .multi-fields select {
+    flex: 1;
+  }
+  
+  .place-order-left input,
+  .place-order-left select {
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 16px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  
+  .cart-total {
+    font-size: 16px;
+    color: #2e1f0f;
+  }
+  
+  .cart-total h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+  
+  .cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+  }
+  
+  .cart-total button {
+    width: 100%;
+    background-color: #d6653c;
+    color: white;
+    padding: 12px 0;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  /* Success Popup Modal */
+  .order-success-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .popup-content {
+    background: #fff;
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  .popup-content h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .popup-content button {
+    background-color: #d6653c;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .place-order {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .multi-fields {
+      flex-direction: column;
+    }
+  
+    .place-order-right {
+      margin-top: 30px;
+    }
+  }
+  

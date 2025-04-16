@@ -1,0 +1,144 @@
+/* .manage-slots-container {
+    padding: 2rem;
+    background-color: #fff;
+  }
+  
+  .slot-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .slot-form input {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .slot-form button {
+    padding: 0.5rem 1rem;
+    background-color: teal;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .slot-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .slot-table th, .slot-table td {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  .slot-table button {
+    margin-right: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+  }
+   */
+
+   .manage-slots-container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .manage-slots-container h2 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+  
+  .slot-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .slot-form label {
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .slot-form input,
+  .slot-form select {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  .slot-form button {
+    width: fit-content;
+    padding: 0.75rem 1.8rem;
+    font-size: 1rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .slot-form button:hover {
+    background-color: #333;
+  }
+  
+  .slot-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  .slot-table th,
+  .slot-table td {
+    padding: 0.85rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.95rem;
+  }
+  
+  .slot-table th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+  }
+  
+  .toggle-btn,
+  .delete-btn {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.85rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .toggle-btn {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .delete-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .toggle-btn:hover {
+    background-color: #388e3c;
+  }
+  
+  .delete-btn:hover {
+    background-color: #d32f2f;
+  }
+  

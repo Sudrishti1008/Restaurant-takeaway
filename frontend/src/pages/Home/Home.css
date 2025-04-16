@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+.home {
+    font-family: 'Staatliches', sans-serif;
+  }
+  
+  .hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #a6332e;
+    padding: 50px 50px;
+    color: #f5da93;
+    flex-wrap: wrap;
+  }
+  
+  .hero-content {
+    flex: 1;
+    max-width: 400px;
+  }
+  
+  .hero-title {
+    font-size: 6rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 40px;
+  }
+  
+  .hero-button {
+    background-color: #ffb700;
+    color: #79231d;
+    padding: 30px 60px;
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30% 70% 40% 60% / 60% 40% 60% 40%;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .hero-button:hover {
+    background-color: #fff2c5;
+  }
+  
+  .hero-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 30% 70% 40% 60% / 60% 40% 60% 40%;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 20px;
+    }
+  
+    .hero-title {
+      font-size: 2.5rem;
+    }
+  
+    .hero-button {
+      font-size: 1rem;
+      padding: 12px 24px;
+    }
+  
+    .hero-image {
+      margin-top: 30px;
+      width: 100%;
+      border-radius: 20px;
+    }
+  }
+  

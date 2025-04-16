@@ -1,0 +1,19 @@
+/* Ensures the body and html take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* The main container of the app */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* The page wrapper (e.g. in App.jsx) should stretch */
+.page-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
