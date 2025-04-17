@@ -5,7 +5,7 @@ const foodSchema = new mongoose.Schema({
   description: String,
   category: String,
   price: Number,
-  image: String,
+  image: String, // will now store the Cloudinary URL
   status: { type: String, enum: ['draft', 'published'], default: 'draft' },
 });
 
