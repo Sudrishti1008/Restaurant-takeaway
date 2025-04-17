@@ -25,7 +25,10 @@ const FoodDisplay = () => {
       <hr className="section-divider" />
       <div className="food-display-list">
         {food_list.map((item, index) => {
-          if (category === 'All' || item.category === category) {
+          if (
+            item.status === 'published' &&
+            (category === 'All' || item.category === category)
+          ) {
             return (
               <FoodItem
                 key={index}
