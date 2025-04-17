@@ -1,118 +1,3 @@
-// import React, { useEffect, useState } from 'react';
-// import './ManageSlots.css'
-// import axios from 'axios';
-// import './ManageSlots.css'; // (optional styling)
-
-// const ManageSlots = ({ url }) => {
-//   const [slots, setSlots] = useState([]);
-//   const [day, setDay] = useState('');
-//   const [timeRange, setTimeRange] = useState('');
-
-//   // Fetch all slots
-//   const fetchSlots = async () => {
-//     try {
-//       const res = await axios.get(`${url}/api/slots/list`);
-//       setSlots(res.data);
-//     } catch (err) {
-//       console.error('Failed to fetch slots', err);
-//     }
-//   };
-
-//   useEffect(() => {
-//     fetchSlots();
-//   }, []);
-
-//   // Add new slot
-//   const handleAddSlot = async (e) => {
-//     e.preventDefault();
-//     try {
-//       await axios.post(`${url}/api/slots/add`, { day, timeRange }, {
-//         headers: { Authorization: localStorage.getItem("token") }
-//       });
-//       setDay('');
-//       setTimeRange('');
-//       fetchSlots();
-//     } catch (err) {
-//       console.error('Failed to add slot', err);
-//     }
-//   };
-
-//   // Toggle availability
-//   const handleToggle = async (id) => {
-//     try {
-//       await axios.patch(`${url}/api/slots/toggle/${id}`, {}, {
-//         headers: { Authorization: localStorage.getItem("token") }
-//       });
-//       fetchSlots();
-//     } catch (err) {
-//       console.error('Toggle failed', err);
-//     }
-//   };
-
-//   // Delete slot
-//   const handleDelete = async (id) => {
-//     try {
-//       await axios.delete(`${url}/api/slots/${id}`, {
-//         headers: { Authorization: localStorage.getItem("token") }
-//       });
-//       fetchSlots();
-//     } catch (err) {
-//       console.error('Delete failed', err);
-//     }
-//   };
-
-//   return (
-//     <div className="manage-slots-container">
-//       <h2>Manage Delivery Slots</h2>
-
-//       <form onSubmit={handleAddSlot} className="slot-form">
-//         <input
-//           type="text"
-//           placeholder="Day (e.g. Monday)"
-//           value={day}
-//           onChange={(e) => setDay(e.target.value)}
-//           required
-//         />
-//         <input
-//           type="text"
-//           placeholder="Time Range (e.g. 10AM - 12PM)"
-//           value={timeRange}
-//           onChange={(e) => setTimeRange(e.target.value)}
-//           required
-//         />
-//         <button type="submit">Add Slot</button>
-//       </form>
-
-//       <table className="slot-table">
-//         <thead>
-//           <tr>
-//             <th>Day</th>
-//             <th>Time Range</th>
-//             <th>Available</th>
-//             <th>Actions</th>
-//           </tr>
-//         </thead>
-//         <tbody>
-//           {slots.map((slot) => (
-//             <tr key={slot._id}>
-//               <td>{slot.day}</td>
-//               <td>{slot.timeRange}</td>
-//               <td>{slot.isAvailable ? '✅' : '❌'}</td>
-//               <td>
-//                 <button onClick={() => handleToggle(slot._id)}>Toggle</button>
-//                 <button onClick={() => handleDelete(slot._id)}>Delete</button>
-//               </td>
-//             </tr>
-//           ))}
-//         </tbody>
-//       </table>
-//     </div>
-//   );
-// };
-
-// export default ManageSlots;
-
-
 import React, { useEffect, useState } from 'react';
 import './ManageSlots.css';
 import axios from 'axios';
@@ -127,12 +12,25 @@ const ManageSlots = ({ url }) => {
   ];
 
   const timeRanges = [
-    '8:00 AM - 10:00 AM',
-    '10:00 AM - 12:00 PM',
-    '12:00 PM - 2:00 PM',
-    '2:00 PM - 4:00 PM',
-    '4:00 PM - 6:00 PM',
-    '6:00 PM - 8:00 PM',
+    '10:00 AM - 10:30 AM',
+    '10:30 AM - 11:00 AM',
+    '11:30 PM - 12:00 PM',
+    '12:00 PM - 12:30 PM',
+    '12:30 PM - 1:00 PM',
+    '1:00 PM - 1:30 PM',
+    '1:30 PM - 2:00 PM',
+    '2:00 PM - 2:30 PM',  
+    '2:30 PM - 3:00 PM',
+    '3:00 PM - 3:30 PM',
+    '3:30 PM - 4:00 PM',
+    '4:00 PM - 4:30 PM',
+    '4:30 PM - 5:00 PM',
+    '5:00 PM - 5:30 PM',
+    '5:30 PM - 6:00 PM',
+    '6:00 PM - 6:30 PM',
+    '6:30 PM - 7:00 PM',
+    '7:00 PM - 7:30 PM',
+    '7:30 PM - 8:00 PM'
   ];
 
   const fetchSlots = async () => {
