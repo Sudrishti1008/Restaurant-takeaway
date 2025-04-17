@@ -1,19 +1,20 @@
 /* Ensures the body and html take full height */
 html, body {
-  height: 100%;
-  margin: 0;
+  height: 100%; /* Allows full viewport height for layout */
+  margin: 0; /* Remove default browser margin */
 }
 
 /* The main container of the app */
 #root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  display: flex;  /* Flex layout to manage vertical structure */
+  flex-direction: column;  /* Stack children vertically (e.g., Navbar > Content > Footer) */
+  min-height: 100vh; /* Ensure full-screen height */
 }
 
 /* The page wrapper (e.g. in App.jsx) should stretch */
 .page-container {
-  flex: 1;
+  flex: 1;  /* Take up all available vertical space between header/footer */
   display: flex;
-  flex-direction: column;
+  display: flex;
+  flex-direction: column; /* Allows stacking inner sections inside page body */
 }

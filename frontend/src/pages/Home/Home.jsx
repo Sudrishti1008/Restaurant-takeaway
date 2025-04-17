@@ -1,6 +1,6 @@
-import React from 'react';
-import './Home.css';
-import heroImage from '../../assets/hero1.png'; 
+import React from 'react'; // Import React
+import './Home.css'; // Import component-specific styling
+import heroImage from '../../assets/hero1.png'; // Import hero section image from assets
 
 const Home = () => {
   return (
@@ -23,6 +23,6 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home; // Export the Home component
 
 

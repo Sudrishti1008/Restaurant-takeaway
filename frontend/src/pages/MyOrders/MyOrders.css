@@ -1,47 +1,47 @@
 .my-orders-page {
-    padding: 40px 20px;
-    background-color: #fff7f0;
-    font-family: 'Poppins', sans-serif;
+    padding: 40px 20px; /* Space around the page */
+    background-color: #fff7f0; /* Light beige background */
+    font-family: 'Poppins', sans-serif; /* Modern readable font */
   }
   
   .my-orders-page h2 {
     text-align: center;
     font-size: 32px;
-    color: #6b240c;
-    margin-bottom: 30px;
+    color: #6b240c; /* Deep brown for header */
+    margin-bottom: 30px; /* Space below the title */
   }
   
   .orders-list {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: column; /* Stack orders vertically */
+    gap: 20px; /* Space between each order card */
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0 auto; /* Center the list horizontally */
   }
   
   .order-card {
-    background: white;
-    border-radius: 12px;
+    background: white; /* White card */
+    border-radius: 12px; /* Rounded corners */
     padding: 20px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.07);
-    border: 1px solid #e0d6c9;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.07); /* Subtle shadow */
+    border: 1px solid #e0d6c9; /* Soft beige border */
   }
   
   .order-line {
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* Row layout */
+    justify-content: space-between; /* Spread label and value */
     padding: 6px 0;
     font-size: 16px;
-    color: #333;
+    color: #333; /* Dark text */
   }
   
   .label {
     font-weight: 600;
-    color: #6b240c;
+    color: #6b240c; /* Brown label text */
   }
   
   .status-line {
-    font-weight: bold;
+    font-weight: bold; /* Emphasize the status line */
   }
   
   .status-processing {
@@ -59,22 +59,22 @@
   .empty-msg {
     text-align: center;
     font-size: 18px;
-    color: #777;
-    margin-top: 40px;
+    color: #777; /* Grey text */
+    margin-top: 40px; /* Space from top */
   }
   
   @media (max-width: 600px) {
     .order-line {
-      flex-direction: column;
-      align-items: flex-start;
+      flex-direction: column; /* Stack label and value vertically */
+      align-items: flex-start; /* Align to the left */
     }
   
     .order-line span {
-      margin-bottom: 5px;
+      margin-bottom: 5px; /* Add space between stacked elements */
     }
   
     .order-card {
-      padding: 15px;
+      padding: 15px; /* Slightly reduced padding for smaller screens */
     }
   }
   

@@ -1,29 +1,34 @@
-import React, { useContext, useEffect, useState } from 'react';
-import './PlaceOrder.css';
-import { StoreContext } from '../../components/context/StoreContext';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react'; // Import React and hooks
+import './PlaceOrder.css'; // Import component styles
+import { StoreContext } from '../../components/context/StoreContext'; // Global context
+import axios from 'axios'; //For API calls
+import { useNavigate } from 'react-router-dom'; // For navigation
 
 const PlaceOrder = () => {
+  // Destructure required values from global StoreContext
   const { getTotalCartAmount, token, food_list, cartItems, url, setCartItems } = useContext(StoreContext);
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Hook to redirect user to other routes
 
+// Local form state for delivery info
   const [data, setData] = useState({
     firstName: '', lastName: '', email: '',
     houseNumber: '', locality: '', county: '',
     eirCode: '', phone: ''
   });
 
+  // State for slot selection
   const [slots, setSlots] = useState([]);
   const [days, setDays] = useState([]);
   const [selectedDay, setSelectedDay] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
   const [showSuccess, setShowSuccess] = useState(false);
 
+  // Redirect to cart if token is missing or cart is empty
   useEffect(() => {
     if (!token || getTotalCartAmount() === 0) navigate('/cart');
   }, [token]);
 
+    // Fetch available delivery slots from server on component mount
   useEffect(() => {
     const fetchSlots = async () => {
       try {
@@ -39,6 +44,7 @@ const PlaceOrder = () => {
     fetchSlots();
   }, []);
 
+  // Handle input change for delivery form
   const onChangeHandler = (event) => {
     const { name, value } = event.target;
     setData(prev => ({ ...prev, [name]: value }));
@@ -90,6 +96,7 @@ const PlaceOrder = () => {
     }
   };
 
+    // Filter time slots based on selected day
   const filteredTimes = slots.filter(slot => slot.day === selectedDay);
 
   return (
@@ -163,4 +170,4 @@ const PlaceOrder = () => {
   );
 };
 
-export default PlaceOrder;
+export default PlaceOrder; // Export the component

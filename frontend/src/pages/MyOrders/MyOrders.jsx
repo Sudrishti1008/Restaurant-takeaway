@@ -1,35 +1,37 @@
-import React, { useContext, useEffect, useState } from 'react';
-import './MyOrders.css';
-import { StoreContext } from '../../components/context/StoreContext';
-import axios from 'axios';
+import React, { useContext, useEffect, useState } from 'react'; // React core + hooks
+import './MyOrders.css'; // CSS file for styling this component
+import { StoreContext } from '../../components/context/StoreContext'; // Import global context
+import axios from 'axios'; // Axios for making API requests
 
 const MyOrders = () => {
-  const { url, token } = useContext(StoreContext);
-  const [data, setData] = useState([]);
+  const { url, token } = useContext(StoreContext); // Get API URL and auth token from context
+  const [data, setData] = useState([]); // Local state to store the user's order data
 
+// Function to fetch orders from backend
   const fetchOrders = async () => {
     try {
       const response = await axios.post(`${url}/api/order/userorders`, {}, {
-        headers: { token }
+        headers: { token } // Pass token in request headers for authentication
       });
-      setData(response.data.data);
+      setData(response.data.data); // Save the fetched order data in state
     } catch (error) {
-      console.error("Error fetching orders", error);
+      console.error("Error fetching orders", error); // Log any errors
     }
   };
-
+// Fetch orders when token is available
   useEffect(() => {
     if (token) fetchOrders();
-  }, [token]);
+  }, [token]); // Fetch orders when token is available
 
+// Helper function to return CSS class based on order status
   const getStatusClass = (status) => {
     switch (status) {
       case 'Delivered':
-        return 'status-delivered';
+        return 'status-delivered'; // Green or success style
       case 'Out for Delivery':
-        return 'status-out';
+        return 'status-out'; // Orange or in-transit style
       default:
-        return 'status-processing';
+        return 'status-processing'; // Default style for processing or unknown
     }
   };
 
@@ -77,4 +79,4 @@ const MyOrders = () => {
   );
 };
 
-export default MyOrders;
+export default MyOrders; // Export the component

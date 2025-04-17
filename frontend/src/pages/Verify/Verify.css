@@ -1,20 +1,20 @@
 .verify{
-    min-height: 60vh;
-    display: grid;
+    min-height: 60vh; /* Ensure the spinner area has decent height */
+    display: grid; /* Use grid to center the spinner easily */
 }
 
 .verify .spinner{
     width: 100px;
     height: 100px;
-    place-self: center;
-    border: 5px solid #bdbdbd;
-    border-top-color:tomato ;
-    border-radius: 50%;
-    animation: rotate 1s infinite;
+    place-self: center; /* Center horizontally and vertically within grid */
+    border: 5px solid #bdbdbd; /* Center horizontally and vertically within grid */
+    border-top-color:tomato ; /* Highlight top with tomato color */
+    border-radius: 50%; /* Make it a perfect circle */
+    animation: rotate 1s infinite; /* Apply infinite rotation animation */
 }
 
 @keyframes rotate {
     100%{
-        transform: rotate(360deg);
+        transform: rotate(360deg); /* Full circle rotation */
     }
 }

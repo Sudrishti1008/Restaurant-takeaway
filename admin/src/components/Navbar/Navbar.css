@@ -1,43 +1,43 @@
 .admin-navbar {
-    display: flex;
-    justify-content: space-between;
-    position: sticky;
-    align-items: center;
-    background-color: #222;
-    padding: 16px 32px;
-    color: #fff;
+    display: flex; /* Flex layout for horizontal alignment */
+    justify-content: space-between; /* Space between left and right sections */
+    position: sticky;  /* Stays fixed while scrolling */
+    align-items: center; /* Vertically center items */
+    background-color: #222; /* Dark background */
+    padding: 16px 32px; /* Spacing inside navbar */
+    color: #fff; /* White text */
   }
   
   .admin-navbar-left {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    display: flex; /* Flex layout for logo and title */
+    align-items: center; /* Vertically align center */
+    gap: 12px; /* Space between elements inside */
   }
 
   
   .admin-navbar-left h1 {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 20px; /* Size of admin title */
+    font-weight: 600; /* Semi-bold text */
   }
   
   .admin-navbar-right {
-    display: flex;
-    align-items: center;
+    display: flex; /* Right section (logout button) */
+    align-items: center; /* Vertically center button */
   }
   
   .logout-button {
-    background-color: #f44336;
-    color: #fff;
-    padding: 8px 18px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
+    background-color: #f44336; /* Red background */
+    color: #fff; /* White text */
+    padding: 8px 18px; /* Button padding */
+    border: none; /* Remove default border */
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 0.95rem; /* Slightly smaller text */
+    font-weight: 500; /* Medium bold */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
   }
   
   .logout-button:hover {
-    background-color: #d32f2f;
+    background-color: #d32f2f; /* Darker red on hover */
   }
   

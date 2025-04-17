@@ -1,34 +1,35 @@
 .sidebar{
-    width: 18%;
-    min-height: 100vh;
-    border: 1.5px solid #a9a9a9;
-    border-top: 0;
-    font-size: max(1vw,10px);
+    width: 18%; /* Sidebar takes up 18% of the screen width */
+    min-height: 100vh; /* Full vertical height */
+    border: 1.5px solid #a9a9a9; /* Light gray border */
+    border-top: 0; /* Remove top border to align with navbar */
+    font-size: max(1vw,10px);  /* Responsive font size: at least 10px */
 }
 .sidebar-options{
-    padding-top: 50px;
-    padding-left: 20%;
-    display: flex;
-    flex-direction: column;
+    padding-top: 50px; /* Space from top (below navbar) */
+    padding-left: 20%; /* Push options slightly inward */
+    display: flex; /* Stack items */
+    flex-direction: column; /* Vertical layout */
     gap: 20px;
 }
 .sidebar-option{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    border: 1px solid #a9a9a9;
-    border-right: 0;
-    padding: 8px 10px;
-    border-radius: 3px 0px 0px 3px;
-    cursor: pointer;
+    display: flex; /* Flex layout for icon + text */
+    align-items: center; /* Vertically center */
+    gap: 12px; /* Space between icon and text */
+    border: 1px solid #a9a9a9; /* Outline each item */
+    border-right: 0; /* Remove right border for cleaner look */
+    padding: 8px 10px; /* Internal spacing */
+    border-radius: 3px 0px 0px 3px; /* Rounded left side */
+    cursor: pointer; /* Pointer cursor on hover */
+
 }
 
 .sidebar-option.active{
-    background-color:#fff0ed ;
-    border-color: tomato;
+    background-color:#fff0ed ; /* Light highlight when active */
+    border-color: tomato; /* Change border color for active */
 }
 @media (max-width:900px) {
     .sidebar-option p{
-        display: none;
+        display: none; /* Hide sidebar text on smaller screens */
     }
-}
+    }

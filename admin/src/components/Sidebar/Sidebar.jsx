@@ -1,6 +1,8 @@
 import React from 'react'
 import './Sidebar.css'
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom' // NavLink is used for navigation with active class support
+
+// Sidebar component for admin dashboard
 const Sidebar = () => {
   return (
     <div className='sidebar'>
@@ -23,4 +25,4 @@ const Sidebar = () => {
   )
 }
 
-export default Sidebar
+export default Sidebar // Export the Sidebar component

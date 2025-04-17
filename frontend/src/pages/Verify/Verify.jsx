@@ -1,16 +1,17 @@
-import React, { useContext, useEffect } from 'react'
-import './Verify.css'
+import React, { useContext, useEffect } from 'react' // Import React and required hooks
+import './Verify.css' // Import Verify page styles
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { StoreContext } from '../../components/context/StoreContext';
-import axios from 'axios';
+import axios from 'axios'; // Axios for making HTTP requests
 const Verify = () => {
-    const [searchParams,setSearchParams]=useSearchParams();
+    const [searchParams,setSearchParams]=useSearchParams(); // Hook to access URL query parameters
     const success = searchParams.get("success");
     const orderId = searchParams.get("orderId");
 
-    const {url} = useContext(StoreContext);
-    const navigate = useNavigate();
+    const {url} = useContext(StoreContext); // Get base URL from context
+    const navigate = useNavigate();// Hook to programmatically redirect user
 
+        // Function to verify payment with backend
     const verifyPayment = async ()=>{
         const response = await axios.post(url+"/api/order/verify",{success,orderId});
         if (response.data.success) {
@@ -33,4 +34,4 @@ const Verify = () => {
   )
 }
 
-export default Verify
+export default Verify // Export the component

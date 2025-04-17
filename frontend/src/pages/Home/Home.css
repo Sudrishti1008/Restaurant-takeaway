@@ -1,80 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap'); /* Importing custom Google Font */
 
 .home {
-    font-family: 'Staatliches', sans-serif;
+    font-family: 'Staatliches', sans-serif; /* Apply custom font to the home section */
   }
   
   .hero-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #a6332e;
-    padding: 50px 50px;
-    color: #f5da93;
-    flex-wrap: wrap;
+    display: flex; /* Side-by-side layout for text + image */
+    justify-content: space-between;  /* Space out content */
+    align-items: center; /* Center items vertically */
+    background-color: #a6332e; /* Dark red background */
+    padding: 50px 50px; /* Outer spacing */
+    color: #f5da93; /* Light yellow text */
+    flex-wrap: wrap; /* Wrap on smaller screens */
   }
   
   .hero-content {
-    flex: 1;
-    max-width: 400px;
+    flex: 1; /* Take equal space */
+    max-width: 400px; /* Limit text width */
   }
   
   .hero-title {
-    font-size: 6rem;
-    font-weight: 600;
-    line-height: 1.2;
-    margin-bottom: 40px;
+    font-size: 6rem; /* Very large heading */
+    font-weight: 600; /* Bold */
+    line-height: 1.2; /* Spacing between lines */
+    margin-bottom: 40px; /* Space below title */
   }
   
   .hero-button {
-    background-color: #ffb700;
-    color: #79231d;
-    padding: 30px 60px;
-    font-size: 2rem;
+    background-color: #ffb700; /* Bright yellow */ 
+    color: #79231d; /* Deep red text */
+    padding: 30px 60px; /* Large button padding */
+    font-size: 2rem; /* Big readable button */
     font-weight: bold;
     border: none;
-    border-radius: 30% 70% 40% 60% / 60% 40% 60% 40%;
-    text-decoration: none;
-    transition: background-color 0.3s;
+    border-radius: 30% 70% 40% 60% / 60% 40% 60% 40%; /* Organic blob shape */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Smooth hover effect */
   }
   
   .hero-button:hover {
-    background-color: #fff2c5;
+    background-color: #fff2c5; /* Lighter yellow on hover */
   }
   
   .hero-image-wrapper {
-    flex: 1;
+    flex: 1; /* Take equal space */
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
   .hero-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 30% 70% 40% 60% / 60% 40% 60% 40%;
+    max-width: 100%; /* Responsive image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 30% 70% 40% 60% / 60% 40% 60% 40%;  /* Match button shape for fun visual style */
   }
   
   @media (max-width: 768px) {
     .hero-section {
-      flex-direction: column;
+      flex-direction: column; /* Stack elements vertically */
       text-align: center;
-      padding: 40px 20px;
+      padding: 40px 20px; /* Reduce padding on small screens */
     }
   
     .hero-title {
-      font-size: 2.5rem;
+      font-size: 2.5rem; /* Smaller heading for mobile */
     }
   
     .hero-button {
-      font-size: 1rem;
+      font-size: 1rem;  /* Adjust button size for mobile */
       padding: 12px 24px;
     }
   
     .hero-image {
-      margin-top: 30px;
-      width: 100%;
-      border-radius: 20px;
+      margin-top: 30px; /* Space above image */
+      width: 100%; /* Take full width */
+      border-radius: 20px; /* Simpler rounded image */
     }
   }
   

@@ -1,42 +1,42 @@
 .place-order {
-    display: flex;
+    display: flex; /* Side-by-side layout */
     justify-content: space-between;
-    gap: 40px;
+    gap: 40px; /* Space between left and right sections */
     padding: 40px;
-    max-width: 1200px;
-    margin: auto;
-    flex-wrap: wrap;
+    max-width: 1200px; /* Limit total width */
+    margin: auto; /* Center horizontally */
+    flex-wrap: wrap; /* Wrap on smaller screens */
   }
   
   .place-order-left {
-    flex: 1;
-    min-width: 300px;
+    flex: 1; /* Take full available width */
+    min-width: 300px; /* Prevent getting too narrow */
   }
   
   .place-order-right {
-    flex: 0.6;
+    flex: 0.6; /* Slightly smaller than left side */
     min-width: 300px;
     padding: 30px;
-    height: fit-content;
+    height: fit-content; /* Adjust height to content */
   }
   
   .section-title {
     font-size: 20px;
     font-weight: 600;
-    color: #2e1f0f;
+    color: #2e1f0f;  /* Dark brown heading */
     margin-bottom: 12px;
     display: block;
   }
   
   .multi-fields {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
+    display: flex; /* Horizontal row */
+    gap: 16px; /* Space between inputs */
+    flex-wrap: wrap; /* Wrap if screen is narrow */
   }
   
   .multi-fields input,
   .multi-fields select {
-    flex: 1;
+    flex: 1; /* Equal width inside multi-fields */
   }
   
   .place-order-left input,
@@ -47,7 +47,7 @@
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 8px;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Includes padding in width */
   }
   
   .cart-total {
@@ -62,13 +62,13 @@
   
   .cart-total-details {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Align name/price sides */
     margin: 12px 0;
   }
   
   .cart-total button {
     width: 100%;
-    background-color: #d6653c;
+    background-color: #d6653c; /* Burnt orange */
     color: white;
     padding: 12px 0;
     font-weight: 600;
@@ -85,11 +85,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.4); /* Semi-transparent background */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    z-index: 999; /* Stay on top */
   }
   
   .popup-content {
@@ -118,16 +118,16 @@
   /* Responsive */
   @media (max-width: 768px) {
     .place-order {
-      flex-direction: column;
+      flex-direction: column; /* Stack left and right vertically */
       padding: 20px;
     }
   
     .multi-fields {
-      flex-direction: column;
+      flex-direction: column; /* Stack fields vertically */
     }
   
     .place-order-right {
-      margin-top: 30px;
+      margin-top: 30px; /* Add spacing below left section */
     }
   }
   

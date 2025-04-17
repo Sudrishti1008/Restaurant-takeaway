@@ -1,12 +1,15 @@
 
-import React, { useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import React, { useState } from 'react'; // React core and useState hook
+import { Route, Routes } from 'react-router-dom'; // Routing components from React Router
+
+// Global layout components
 
 import Navbar from './components/Navbar/Navbar';
 import Banner from './components/Banner/Banner';
 import Footer from './components/Footer/Footer';
 import LoginPopup from './components/LoginPopup/LoginPopup';
 
+// Page components
 import Home from './pages/Home/Home';
 import Cart from './pages/Cart/Cart';
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
@@ -15,7 +18,7 @@ import MyOrders from './pages/MyOrders/MyOrders';
 import Menu from './pages/Menu/Menu'; 
 
 const App = () => {
-  const [showLogin, setShowLogin] = useState(false);
+  const [showLogin, setShowLogin] = useState(false); // Local state to control login popup visibility
 
   return (
     <>
@@ -42,5 +45,5 @@ const App = () => {
   );
 };
 
-export default App;
+export default App; // Export the root App component
 
