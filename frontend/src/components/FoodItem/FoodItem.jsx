@@ -14,7 +14,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
         <p className="food-item-desc">{description}</p>
       </div>
       <div className="food-item-img-container">
-        <img className="food-item-img" src={`${url}/images/` + image} alt={name} />
+      <img className="food-item-img" src={image} alt={name} />
         <div className="food-item-actions">
           {cartItems[id] ? (
             <div className="food-item-counter">
